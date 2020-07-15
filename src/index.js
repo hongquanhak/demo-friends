@@ -1,12 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Card from './Card';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import 'tachyons';
+import ReactDOM from "react-dom";
+import "./index.css";
+import CardList from "./CardList";
+import {friends} from './friends';
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <Card />,
-  document.getElementById('root')
+  <CardList friends={friends}/>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
