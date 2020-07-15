@@ -2,12 +2,11 @@ import React from "react";
 import 'tachyons';
 import ReactDOM from "react-dom";
 import "./index.css";
-import CardList from "./CardList";
-import {friends} from './friends';
+import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <CardList friends={friends}/>,
+  <App />,
   document.getElementById("root")
 );
 
