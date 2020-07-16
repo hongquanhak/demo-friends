@@ -2,14 +2,19 @@ import React, { Component } from 'react';
 import CardList from './CardList';
 import { friends } from './friends';
 import SearchBox from './SearchBox';
+import './App.module.css'
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
-            friends: friends,
+            friends: [],
             searchField: ''
         }
+    }
+
+    componentDidMount() {
+        this.setState({ friends: friends})
     }
 
     onSearchChange = (event) => {
@@ -22,7 +27,7 @@ class App extends Component {
         })
         return (
             <div className='tc'>
-                <h1>Friends in Enclave</h1>
+                <h1 className='f1'>Friends in Enclave</h1>
                 <SearchBox searchChange={this.onSearchChange} />
                 <CardList friends={filteredFriends} />
             </div>
